@@ -61,4 +61,6 @@ export class AllProductsComponent implements OnInit {
       this.products = res;
     });
   }
+
+  
 }

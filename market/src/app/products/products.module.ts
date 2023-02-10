@@ -6,13 +6,15 @@ import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule } from '@angular/forms';
 import { SpinnerComponent } from '../shared/components/spinner/spinner.component';
 import { SharedModule } from '../shared/shared.module';
+import { ProductComponent } from './components/product/product.component';
 
 
 
 @NgModule({
   declarations: [
     AllProductsComponent,
-    ProductsDetailsComponent
+    ProductsDetailsComponent,
+    ProductComponent
   ],
   imports: [
     CommonModule,

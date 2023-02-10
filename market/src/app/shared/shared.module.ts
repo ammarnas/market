@@ -23,7 +23,8 @@ import { SelectComponent } from './components/select/select.component';
   ],
   exports:[
     HeaderComponent,
-    SpinnerComponent
+    SpinnerComponent,
+    SelectComponent
   ]
 })
 export class SharedModule { }
