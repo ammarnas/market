@@ -14,6 +14,7 @@ export class AllProductsComponent implements OnInit {
   products: any[] = [];
   categories: any[] = [];
   loading: boolean = false;
+  cartProducts: any[] = [];
 
   constructor(private productService: ProductsService) {}
 
@@ -62,5 +63,19 @@ export class AllProductsComponent implements OnInit {
     });
   }
 
-  
+  addToCart(event: any) {
+    if("cart" in localStorage) {
+      this.cartProducts = JSON.parse(localStorage.getItem("cart")!);
+      let exsit = this.cartProducts.find(item => item.id == event.id);
+      if(exsit) {
+        alert("Product is already in your cart")
+      }else {
+        this.cartProducts.push(event)
+        localStorage.setItem("cart" , JSON.stringify(this.cartProducts));
+      }
+    } else {
+      this.cartProducts.push(event)
+      localStorage.setItem("cart" , JSON.stringify(this.cartProducts));
+    }
+  }
 }
