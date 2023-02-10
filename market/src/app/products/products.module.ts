@@ -4,6 +4,8 @@ import { AllProductsComponent } from './components/all-products/all-products.com
 import { ProductsDetailsComponent } from './components/products-details/products-details.component';
 import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule } from '@angular/forms';
+import { SpinnerComponent } from '../shared/components/spinner/spinner.component';
+import { SharedModule } from '../shared/shared.module';
 
 
 
@@ -15,7 +17,8 @@ import { FormsModule } from '@angular/forms';
   imports: [
     CommonModule,
     BrowserModule,
-    FormsModule
+    FormsModule,
+    SharedModule
   ],
   exports: [
     AllProductsComponent
