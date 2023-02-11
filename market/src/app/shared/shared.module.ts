@@ -6,6 +6,8 @@ import { RouterModule } from '@angular/router';
 import { HttpClientModule } from '@angular/common/http';
 import { SpinnerComponent } from './components/spinner/spinner.component';
 import { SelectComponent } from './components/select/select.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { BrowserModule } from '@angular/platform-browser';
 
 
 
@@ -17,13 +19,19 @@ import { SelectComponent } from './components/select/select.component';
   ],
   imports: [
     CommonModule,
+    BrowserModule,
+    ReactiveFormsModule,
+    FormsModule,
     RouterModule,
     HttpClientModule
-    
   ],
   exports:[
     HeaderComponent,
+    BrowserModule,
+    ReactiveFormsModule,
     SpinnerComponent,
+    RouterModule,
+    FormsModule,
     SelectComponent
   ]
 })
