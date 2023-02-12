@@ -3,6 +3,7 @@ import { ProductsService } from '../../services/products.service';
 
 import { CommonModule } from '@angular/common';
 import { BrowserModule } from '@angular/platform-browser';
+import { IProduct } from '../../models/IProduct';
 
 @Component({
   selector: 'app-all-products',
@@ -11,8 +12,8 @@ import { BrowserModule } from '@angular/platform-browser';
 })
 export class AllProductsComponent implements OnInit {
 
-  products: any[] = [];
-  categories: any[] = [];
+  products: IProduct[] = [];
+  categories: string[] = [];
   loading: boolean = false;
   cartProducts: any[] = [];
 
